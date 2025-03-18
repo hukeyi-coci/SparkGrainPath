@@ -1,0 +1,242 @@
+/* 重置默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #FFF5F5; /* 浅红色背景 */
+}
+
+
+
+/* 导航栏样式 */
+nav {
+    background-color: #D32F2F; /* 深红色导航栏 */
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #FFCDD2; /* 浅红色悬浮效果 */
+}
+
+/* 头部横幅样式 */
+header {
+    background-image: url('images/header_bg.jpg'); /* 替换为实际背景图片 */
+    background-size: cover;
+    background-position: center top; /* 图片顶部对齐 */
+    background-attachment: fixed; /* 固定背景图片 */
+    min-height: 800px; /* 增加高度，增强视觉效果 */
+    color: #ffffff;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-top: 60px; /* 避开固定导航栏 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影，增强可读性 */
+}
+
+header p {
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 主内容样式 */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* 模块样式 */
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    font-size: 36px;
+    color: #D32F2F; /* 标题使用深红色 */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 功能区域样式 */
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.feature .text {
+    flex: 1;
+}
+
+/* 为 h3 添加按钮样式 */
+.feature h3 {
+    cursor: pointer;
+    background-color: #D32F2F; /* 深红色按钮背景 */
+    color: #fff; /* 白色文字 */
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature h3:hover {
+    background-color: #B71C1C; /* 更深的红色悬浮效果 */
+    transform: translateY(-2px);
+}
+
+.feature p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* 详细页面容器样式 */
+.detail-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-container h1 {
+    color: #D32F2F; /* 深红色标题 */
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.detail-container h2 {
+    color: #D32F2F;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.detail-container p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.detail-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.detail-container a {
+    display: inline-block;
+    color: #D32F2F; /* 深红色链接 */
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #D32F2F;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.detail-container a:hover {
+    background-color: #D32F2F;
+    color: #fff;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #D32F2F; /* 深红色页脚 */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    header {
+        min-height: 300px; /* 小屏幕减小 header 高度 */
+        padding-top: 100px;
+    }
+}
